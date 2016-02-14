@@ -1,1 +1,5 @@
 tile.trashcan.name=Trash Can
+tile.trashbag.name=Trash Bag
+item.trashbag.name=Trash Bag
+
+tile.trashcanfluid.name=Fluid Trash Can

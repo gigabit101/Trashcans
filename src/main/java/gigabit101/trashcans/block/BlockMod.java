@@ -15,32 +15,37 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import reborncore.RebornCore;
 
-public class BlockTrashcan extends BlockMod
-{ 
+public class BlockMod extends BlockContainer implements ITexturedBlock
+{
 	private String top = "trashcans:blocks/trashtop";
 	private String side = "trashcans:blocks/trashside";
 	private String front = "trashcans:blocks/trashfront";
 	private String bottom = "trashcans:blocks/trashbottom";
 	
-	public BlockTrashcan() 
+	public BlockMod() 
 	{
-		super();
-		setUnlocalizedName("trashcan");
-	}
-	
-	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (!player.isSneaking())
-		{
-			player.openGui(TrashCans.INSTANCE, GuiHandler.trashcanID, world, pos.getX(), pos.getY(), pos.getZ());
-		}
-		return true;
+		super(Material.iron);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setHardness(2.0F);
+		RebornCore.jsonDestroyer.registerObject(this);
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) 
 	{
-		return new TileTrashcan();
+		return null;
+	}
+
+	@Override
+	public int amountOfStates() 
+	{
+		return 1;
+	}
+	
+	@Override
+	public int getRenderType() 
+	{
+		return 3;
 	}
 
 	@Override

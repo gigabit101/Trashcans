@@ -2,21 +2,22 @@ package gigabit101.trashcans.gui;
 
 import gigabit101.trashcans.block.tile.TileTrashcan;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import reborncore.common.container.RebornContainer;
 
-public class ContainerTrashcan extends RebornContainer
+public class ContainerTrashBag extends RebornContainer
 {
-	public TileTrashcan tile;
+	public InventoryTrashBag baginv;
 	public EntityPlayer player;
 	
-	public ContainerTrashcan(TileTrashcan tile, EntityPlayer player) 
+	public ContainerTrashBag(EntityPlayer player) 
 	{
 		super();
-		this.tile = tile;
 		this.player = player;
+		baginv = new InventoryTrashBag(player);
 
-		this.addSlotToContainer(new Slot(tile.inv, 0, 84, 44));
+		this.addSlotToContainer(new Slot(baginv, 0, 84, 44));
 
 		int i;
 
@@ -39,5 +40,4 @@ public class ContainerTrashcan extends RebornContainer
 	{
 		return true;
 	}
-
 }

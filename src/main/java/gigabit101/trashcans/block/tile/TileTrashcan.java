@@ -1,4 +1,4 @@
-package gigabit101.trashcans.block;
+package gigabit101.trashcans.block.tile;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

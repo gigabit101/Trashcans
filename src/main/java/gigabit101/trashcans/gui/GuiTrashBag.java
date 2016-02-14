@@ -8,13 +8,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 
-public class GuiTrashcan extends GuiContainer
+public class GuiTrashBag extends GuiContainer
 {
 	private static final ResourceLocation texture = new ResourceLocation("trashcans", "textures/gui/trashcan.png");
 
-	public GuiTrashcan(EntityPlayer player, TileTrashcan trash) 
+	public GuiTrashBag(EntityPlayer player) 
 	{
-		super(new ContainerTrashcan(trash, player));
+		super(new ContainerTrashBag(player));
 		this.xSize = 200;
 		this.ySize = 200;
 	}
@@ -27,7 +27,7 @@ public class GuiTrashcan extends GuiContainer
 	
 	protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) 
 	{
-		String name = StatCollector.translateToLocal("tile.trashcan.name");
+		String name = StatCollector.translateToLocal("tile.trashbag.name");
 		this.fontRendererObj.drawString(name, this.xSize / 2 - 10 - this.fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
 		this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 115 + 2, 4210752);
 	}
