@@ -1,16 +1,12 @@
 package gigabit101.trashcans.block;
 
-import gigabit101.trashcans.GuiHandler;
-import gigabit101.trashcans.TrashCans;
-import gigabit101.trashcans.block.tile.TileTrashcan;
 import me.modmuss50.jsonDestroyer.api.ITexturedBlock;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import reborncore.RebornCore;
@@ -43,10 +39,16 @@ public class BlockMod extends BlockContainer implements ITexturedBlock
 	}
 	
 	@Override
-	public int getRenderType() 
+	public EnumBlockRenderType getRenderType(IBlockState state) 
 	{
-		return 3;
+		return EnumBlockRenderType.MODEL;
 	}
+	
+//	@Override
+//	public int getRenderType() 
+//	{
+//		return 3;
+//	}
 
 	@Override
 	public String getTextureNameFromState(IBlockState arg0, EnumFacing arg1)

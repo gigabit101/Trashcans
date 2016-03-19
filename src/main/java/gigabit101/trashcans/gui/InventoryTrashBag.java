@@ -3,8 +3,8 @@ package gigabit101.trashcans.gui;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.text.ITextComponent;
 import reborncore.common.util.Inventory;
 
 public class InventoryTrashBag implements IInventory
@@ -24,7 +24,7 @@ public class InventoryTrashBag implements IInventory
 	}
 
 	@Override
-	public IChatComponent getDisplayName() 
+	public ITextComponent getDisplayName() 
 	{
 		return null;
 	}
