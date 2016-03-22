@@ -28,7 +28,7 @@ repositories {
     }
 }
 
-version = "1.9-2.0.1"
+version = "1.9-2.0.2"
 group= "gigabit101.trashcans" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Trashcans"
 
