@@ -6,6 +6,8 @@ import gigabit101.trashcans.block.tile.TileTrashcan;
 import gigabit101.trashcans.block.tile.TileTrashcanFluid;
 import gigabit101.trashcans.item.ItemTrashbag;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -64,5 +66,10 @@ public class TrashCans
 				'L', new ItemStack(Items.leather));
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler("Trashcans", new GuiHandler());
+		
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+	    .register(Item.getItemFromBlock(trashcan), 0, new ModelResourceLocation("trashcans:trashcan", "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+	    .register(Item.getItemFromBlock(trashcanFluid), 0, new ModelResourceLocation("trashcans:trashcanfluid", "inventory"));
 	}
 }
