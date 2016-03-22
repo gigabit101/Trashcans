@@ -28,7 +28,7 @@ public class BlockTrashcan extends BlockMod
 		{
 			player.openGui(TrashCans.INSTANCE, GuiHandler.trashcanID, world, pos.getX(), pos.getY(), pos.getZ());
 		}
-		return false;
+		return true;
 	}
 
 	@Override
