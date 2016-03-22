@@ -28,12 +28,12 @@ repositories {
     }
 }
 
-version = "1.9-2.0.0"
+version = "1.9-2.0.1"
 group= "gigabit101.trashcans" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Trashcans"
 
 minecraft {
-    version = "1.9-12.16.0.1766-1.9"
+    version = "1.9-12.16.0.1776-1.9"
     runDir = "run"
     mappings = "snapshot_20160312"
 }

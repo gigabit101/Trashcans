@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(name = "Trashcans", modid = "Trashcans", version = "2.0.0", dependencies = "required-after:reborncore")
+@Mod(name = "Trashcans", modid = "Trashcans", version = "2.0.1", dependencies = "required-after:reborncore")
 public class TrashCans 
 {
 	@Mod.Instance
