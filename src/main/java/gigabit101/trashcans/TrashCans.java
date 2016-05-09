@@ -5,19 +5,19 @@ import gigabit101.trashcans.block.BlockTrashcanFluid;
 import gigabit101.trashcans.block.tile.TileTrashcan;
 import gigabit101.trashcans.block.tile.TileTrashcanFluid;
 import gigabit101.trashcans.item.ItemTrashbag;
+import gigabit101.trashcans.proxy.CommonProxy;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(name = "Trashcans", modid = "Trashcans", version = "2.0.0", dependencies = "required-after:reborncore")
+@Mod(name = "Trashcans", modid = "Trashcans", version = "2.0.2", dependencies = "required-after:reborncore")
 public class TrashCans 
 {
 	@Mod.Instance
@@ -27,6 +27,9 @@ public class TrashCans
 	public static Block trashcanFluid;
 	
 	public static Item trashbag;
+	
+	@SidedProxy(clientSide = "gigabit101.trashcans.proxy.ClientProxy", serverSide = "gigabit101.trashcans.proxy.CommonProxy")
+	public static CommonProxy proxy;
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
@@ -65,11 +68,8 @@ public class TrashCans
 				'C', new ItemStack(trashcan), 
 				'L', new ItemStack(Items.leather));
 		
-		NetworkRegistry.INSTANCE.registerGuiHandler("Trashcans", new GuiHandler());
+		proxy.registerRenders();
 		
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-	    .register(Item.getItemFromBlock(trashcan), 0, new ModelResourceLocation("trashcans:trashcan", "inventory"));
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-	    .register(Item.getItemFromBlock(trashcanFluid), 0, new ModelResourceLocation("trashcans:trashcanfluid", "inventory"));
+		NetworkRegistry.INSTANCE.registerGuiHandler("Trashcans", new GuiHandler());
 	}
 }
