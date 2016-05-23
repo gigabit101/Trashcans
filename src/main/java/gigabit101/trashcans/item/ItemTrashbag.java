@@ -21,7 +21,7 @@ public class ItemTrashbag extends Item implements ITexturedItem
 	public ItemTrashbag() 
 	{
 		setUnlocalizedName("trashbag");
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(CreativeTabs.MISC);
 		setMaxStackSize(1);
 		RebornCore.jsonDestroyer.registerObject(this);
 	}

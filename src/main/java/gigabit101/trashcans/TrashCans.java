@@ -49,24 +49,24 @@ public class TrashCans
 				"SSS", 
 				"CHC", 
 				"CCC", 
-				'C', new ItemStack(Blocks.cobblestone), 
-				'H', new ItemStack(Blocks.chest),
-				'S', new ItemStack(Blocks.stone));
+				'C', new ItemStack(Blocks.COBBLESTONE),
+				'H', new ItemStack(Blocks.CHEST),
+				'S', new ItemStack(Blocks.STONE));
 		
 		GameRegistry.addRecipe(new ItemStack(trashcanFluid), 
 				"SSS", 
 				"CHC", 
 				"CCC", 
-				'C', new ItemStack(Blocks.cobblestone), 
-				'H', new ItemStack(Items.bucket),
-				'S', new ItemStack(Blocks.stone));
+				'C', new ItemStack(Blocks.COBBLESTONE),
+				'H', new ItemStack(Items.BUCKET),
+				'S', new ItemStack(Blocks.STONE));
 		
 		GameRegistry.addRecipe(new ItemStack(trashbag), 
 				"LXL", 
 				"LCL", 
 				"LLL", 
 				'C', new ItemStack(trashcan), 
-				'L', new ItemStack(Items.leather));
+				'L', new ItemStack(Items.LEATHER));
 		
 		proxy.registerRenders();
 		

@@ -34,7 +34,7 @@ public class BlockTrashcanFluid extends BlockMod
 				{
                     if (!player.inventory.addItemStackToInventory(FluidContainerRegistry.drainFluidContainer(stack))) 
                     {
-                        player.dropPlayerItemWithRandomChoice(FluidContainerRegistry.drainFluidContainer(stack), false);
+                        player.dropItem(FluidContainerRegistry.drainFluidContainer(stack), false);
                     }
                     stack.stackSize--;
 				}

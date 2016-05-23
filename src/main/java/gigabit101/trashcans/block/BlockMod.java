@@ -15,8 +15,8 @@ import reborncore.RebornCore;
 public class BlockMod extends BlockContainer {
 
 	public BlockMod() {
-		super(Material.iron);
-		setCreativeTab(CreativeTabs.tabMisc);
+		super(Material.IRON);
+		setCreativeTab(CreativeTabs.MISC);
 		setHardness(2.0F);
 		RebornCore.jsonDestroyer.registerObject(this);
 	}
