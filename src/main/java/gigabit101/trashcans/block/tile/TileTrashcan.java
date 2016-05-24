@@ -4,8 +4,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.text.ITextComponent;
 import reborncore.common.util.Inventory;
 
 public class TileTrashcan extends TileEntity implements IInventory, ITickable
@@ -34,7 +34,7 @@ public class TileTrashcan extends TileEntity implements IInventory, ITickable
 	}
 
 	@Override
-	public IChatComponent getDisplayName() 
+	public ITextComponent getDisplayName() 
 	{
 		return inv.getDisplayName();
 	}
